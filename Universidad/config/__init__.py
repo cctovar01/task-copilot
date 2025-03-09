@@ -1,0 +1,1 @@
+# Este archivo se utiliza para definir la configuración de la aplicación. Puede contener configuraciones como la conexión a la base de datos y otras variables de entorno.

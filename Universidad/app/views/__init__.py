@@ -1,0 +1,1 @@
+# Este archivo se utiliza para definir las vistas de la aplicación. Aquí se pueden importar y definir las funciones que renderizan las plantillas y devuelven las respuestas al cliente.

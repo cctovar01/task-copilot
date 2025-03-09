@@ -1,0 +1,1 @@
+# Este archivo se utiliza para definir los controladores de la aplicación. Aquí se pueden importar y definir las clases que manejarán la lógica de negocio y las interacciones con los modelos.
