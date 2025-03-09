@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Materia</title>
+</head>
+<body>
+    <h1>Crear Materia</h1>
+    <form action="{{ url_for('crear_materia') }}" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <label for="codigo">Código:</label>
+        <input type="text" id="codigo" name="codigo" required><br>
+        <label for="creditos">Créditos:</label>
+        <input type="text" id="creditos" name="creditos" required><br>
+        <button type="submit">Crear</button>
+    </form>
+    <a href="{{ url_for('listar_materias') }}">Volver a la Lista de Materias</a>
+</body>
+</html>

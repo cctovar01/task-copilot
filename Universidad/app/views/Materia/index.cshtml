@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Materias</title>
+</head>
+<body>
+    <h1>Lista de Materias</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Código</th>
+                <th>Créditos</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for materia in materias %}
+            <tr>
+                <td>{{ materia.nombre }}</td>
+                <td>{{ materia.codigo }}</td>
+                <td>{{ materia.creditos }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('crear_materia') }}">Agregar Nueva Materia</a>
+</body>
+</html>

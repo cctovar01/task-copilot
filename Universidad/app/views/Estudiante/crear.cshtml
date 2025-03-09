@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Estudiante</title>
+</head>
+<body>
+    <h1>Crear Estudiante</h1>
+    <form action="{{ url_for('crear_estudiante') }}" method="post">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" required><br>
+        <label for="sexo">Sexo:</label>
+        <input type="text" id="sexo" name="sexo" required><br>
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required><br>
+        <label for="anio_nacimiento">Año de Nacimiento:</label>
+        <input type="text" id="anio_nacimiento" name="anio_nacimiento" required><br>
+        <label for="nacionalidad">Nacionalidad:</label>
+        <input type="text" id="nacionalidad" name="nacionalidad" required><br>
+        <label for="anio_ingreso">Año de Ingreso:</label>
+        <input type="text" id="anio_ingreso" name="anio_ingreso" required><br>
+        <button type="submit">Crear</button>
+    </form>
+    <a href="{{ url_for('listar_estudiantes') }}">Volver a la Lista de Estudiantes</a>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Profesores</title>
+</head>
+<body>
+    <h1>Lista de Profesores</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>DNI</th>
+                <th>Sexo</th>
+                <th>Dirección</th>
+                <th>Año de Nacimiento</th>
+                <th>Nacionalidad</th>
+                <th>Título</th>
+                <th>Año de Egresado</th>
+                <th>Año de Ingreso</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for profesor in profesores %}
+            <tr>
+                <td>{{ profesor.apellido }}</td>
+                <td>{{ profesor.nombre }}</td>
+                <td>{{ profesor.dni }}</td>
+                <td>{{ profesor.sexo }}</td>
+                <td>{{ profesor.direccion }}</td>
+                <td>{{ profesor.anio_nacimiento }}</td>
+                <td>{{ profesor.nacionalidad }}</td>
+                <td>{{ profesor.titulo }}</td>
+                <td>{{ profesor.anio_egresado }}</td>
+                <td>{{ profesor.anio_ingreso }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('crear_profesor') }}">Agregar Nuevo Profesor</a>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Estudiantes</title>
+</head>
+<body>
+    <h1>Lista de Estudiantes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>DNI</th>
+                <th>Sexo</th>
+                <th>Dirección</th>
+                <th>Año de Nacimiento</th>
+                <th>Nacionalidad</th>
+                <th>Año de Ingreso</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for estudiante in estudiantes %}
+            <tr>
+                <td>{{ estudiante.apellido }}</td>
+                <td>{{ estudiante.nombre }}</td>
+                <td>{{ estudiante.dni }}</td>
+                <td>{{ estudiante.sexo }}</td>
+                <td>{{ estudiante.direccion }}</td>
+                <td>{{ estudiante.anio_nacimiento }}</td>
+                <td>{{ estudiante.nacionalidad }}</td>
+                <td>{{ estudiante.anio_ingreso }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('crear_estudiante') }}">Agregar Nuevo Estudiante</a>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Periodos</title>
+</head>
+<body>
+    <h1>Lista de Periodos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Tiempo</th>
+                <th>Materias</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for periodo in periodos %}
+            <tr>
+                <td>{{ periodo.nombre }}</td>
+                <td>{{ periodo.tiempo }}</td>
+                <td>
+                    <ul>
+                        {% for materia in periodo.materias %}
+                        <li>{{ materia.nombre }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('crear_periodo') }}">Agregar Nuevo Periodo</a>
+</body>
+</html>
